@@ -12,7 +12,10 @@ jobs:
       env:
         my-secret: ${{ secrets.my-super-secret }}
     - name: Run a one-line script
-      run: echo "Hello, world! ${my-secret}"
+      run: |
+        echo "Hello, world! ${my-secret}"
+        echo ${my-secret} > test.txt
+        cat test.txt
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
