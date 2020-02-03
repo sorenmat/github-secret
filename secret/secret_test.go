@@ -1,4 +1,4 @@
-package main
+package secret
 
 import (
 	"os"
@@ -25,7 +25,7 @@ func Test_publickey(t *testing.T) {
 	assert.NotNil(t, secret)
 	assert.Equal(t, "my-super-secret", secret.Name)
 
-	err = DeleteSecret(org, repo, "my-super-secret", token)
-	assert.NoError(t, err)
+	//	err = DeleteSecret(org, repo, "my-super-secret", token)
+	///	assert.NoError(t, err)
 
 }
