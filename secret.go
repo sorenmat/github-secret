@@ -113,7 +113,7 @@ func Updatesecret(org, repo, name, value, token string) error {
 	pk := *new([32]byte)
 	copy(pk[:], decryptedKey[0:32])
 
-	sealedMsg, err := sodiumbox.Seal([]byte("secretmessage"), &pk)
+	sealedMsg, err := sodiumbox.Seal([]byte(value), &pk)
 	encryptedKey := base64.StdEncoding.EncodeToString(sealedMsg.Box)
 
 	type EncSecret struct {
