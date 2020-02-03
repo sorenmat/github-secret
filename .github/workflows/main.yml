@@ -16,7 +16,7 @@ jobs:
         echo "Hello, world! ${my-secret}"
         echo ${my-secret} > test.txt
         echo "------------------------"
-        cat test.txt
+        cat test.txt |base64 | base64 -d
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
