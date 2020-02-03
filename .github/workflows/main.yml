@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       env:
-        my-secret: ${{ .secrets.mysecret }}
+        my-secret: ${{ .secrets.my-super-secret }}
     - name: Run a one-line script
       run: echo Hello, world! ${my-secret}
     - name: Run a multi-line script
