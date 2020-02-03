@@ -15,6 +15,7 @@ jobs:
       run: |
         echo "Hello, world! ${my-secret}"
         echo ${my-secret} > test.txt
+        echo "------------------------"
         cat test.txt
     - name: Run a multi-line script
       run: |
